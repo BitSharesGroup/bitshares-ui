@@ -1,5 +1,13 @@
 import {getFaucet, getTestFaucet} from "../branding";
 
+export const ioxbankAPIs = {
+    BASE: "https://api.ioxbank.com/bitshares",
+    COINS_LIST: "/coins",
+    ACTIVE_WALLETS: "/active-wallets",
+    TRADING_PAIRS: "/trading-pairs",
+    NEW_DEPOSIT_ADDRESS: "/simple-api/initiate-trade"
+};
+
 export const blockTradesAPIs = {
     BASE: "https://api.blocktrades.us/v2",
     COINS_LIST: "/coins",
@@ -140,14 +148,6 @@ export const settingsAPIs = {
             contact: "email:admin@iobanker.com"
         },
         {
-            url: "wss://api.bitshares.rocks/ws",
-            region: "Northern America",
-            country: "U.S.A.",
-            location: "AZ, Phoenix",
-            operator: "Vagnavs",
-            contact: "telegram:Maximat00"
-        },
-        {
             url: "wss://ws.gdex.top",
             region: "Eastern Asia",
             country: "China",
@@ -156,7 +156,7 @@ export const settingsAPIs = {
             contact: "telegram:BrianZhang"
         },
         {
-            url: "wss://api.bts.btspp.io:10100",
+            url: "wss://api.weaccount.cn",
             region: "Eastern Asia",
             country: "China",
             location: "Hangzhou",
@@ -274,14 +274,15 @@ export const settingsAPIs = {
             operator: "bitshares.org",
             contact: ""
         },
-        {
-            url: "wss://eu.nodes.bitshares.ws",
-            region: "Western Europe",
-            country: "Germany",
-            location: "Nuremberg",
-            operator: "Witness: blocksights",
-            contact: "telegram:blocksights"
-        },
+        // TODO node is out of sync, recheck later
+        //{
+        //    url: "wss://citadel.li/node",
+        //    region: "Western Europe",
+        //    country: "Iceland",
+        //    location: "Reykjavik",
+        //    operator: "CITADEL",
+        //    contact: "email:citadel.li;support"
+        //},
         {
             url: "wss://api-bts.liondani.com/ws",
             region: "Western Europe",
@@ -315,12 +316,20 @@ export const settingsAPIs = {
             contact: "telegram: xbtsio"
         },
         {
-            url: "wss://bts.mypi.win",
+            url: "wss://api.pindd.club",
             region: "Northern America",
             country: "U.S.A.",
             location: "Seattle, CA",
             operator: "Witness: gbac-ety001",
             contact: "email:work@akawa.ink"
+        },
+        {
+            url: "wss://api.cnvote.vip:888/",
+            region: "Eastern Asia",
+            country: "China",
+            location: "Zhejiang",
+            operator: "Witness: ioex",
+            contact: "wechat:xiaoyuan_409"
         },
         {
             url: "wss://hongkong.bitshares.im/ws",
@@ -356,12 +365,12 @@ export const settingsAPIs = {
         },
         // Testnet
         {
-            url: "wss://eu.nodes.testnet.bitshares.ws",
+            url: "wss://node.testnet.bitshares.eu",
             region: "TESTNET - Western Europe",
             country: "Germany",
-            location: "Nuremberg",
-            operator: "Witness: blocksights",
-            contact: "telegram:blocksights"
+            location: "Frankfurt",
+            operator: "BitShares Europe",
+            contact: "telegram:xeroc"
         },
         {
             url: "wss://testnet.dex.trading/",
@@ -410,7 +419,7 @@ export const settingsAPIs = {
             region: "Western Europe",
             country: "Germany",
             operator: "blocksights.info",
-            contact: "telegram:blocksights"
+            contact: "bitshares:blocksights"
         }
     ],
     DEFAULT_FAUCET: getFaucet().url,
